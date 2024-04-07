@@ -1,0 +1,38 @@
+{/* <>
+    <StatusBar/>
+      <View style={styles.container}>
+      {notHome ? 
+        (itemScreen ? 
+        <ItemScreen 
+        setItemScreen={seItemScreen}
+        itemDetalle = {itemDetalle}
+        onHandlerModal={onHandlerModal}
+        modalVisible = {modalVisible}
+          tareaSelect = {tareaSelect}
+          borrarTarea = {borrarTarea}
+          setHome={setHome}
+          setItemDetalle={setItemDetalle}
+          
+        /> :
+        <ColeccionScreen
+        tareaTitle= {tareaTitle} 
+        onHandlerTitle= {onHandlerTitle}
+        tareaDesc= {tareaDesc} 
+        onHandlerDesc= {onHandlerDesc}
+        agregarTarea= {agregarTarea}
+        screenWidth={screenWidth}
+        arrTarea = {arrTarea}
+        onHandlerModal = {onHandlerModal}
+        completeTask={completeTask}
+        screenHeigth = {screenHeigth}
+        modalVisible = {modalVisible}
+        tareaSelect = {tareaSelect}
+        borrarTarea = {borrarTarea}
+        setHome={setHome}
+        seItemScreen = {seItemScreen} 
+        onHandlerDetalle = {onHandlerDetalle}
+        /> ): 
+        <Home setHome={setHome}/> } 
+      
+    </View>
+    </> */}

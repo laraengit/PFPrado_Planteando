@@ -1,0 +1,33 @@
+[
+    {   "id":0,
+        "nombre":"Palo de agua",
+        "Riego": "Rociar con agua dos veces a la semana",
+        "Luz":"Natural pero sin sol directo",
+        "Cuidados":"Limpiar periódicamente sus hojas",
+        "imagen":"../assets/palo_de_agua.jpg"
+
+    },
+    {   "id":1,
+        "nombre":"Aloe Vera",
+        "Riego": "Riego constante, sin encharcar",
+        "Luz":"Exterior",
+        "Cuidados":"No somenter a temperaturas extremas",
+        "imagen":"../assets/aloe_vera.jpg"
+    },
+    {   "id":2,
+        "nombre":"Calatea",
+        "Riego": "Riego constante, sin encharcar",
+        "Luz":"Exterior",
+        "Cuidados":"No somenter a temperaturas extremas",
+        "imagen":"../assets/catalea.jpg"
+    },
+    {   "id":3,
+        "nombre":"Jazmín",
+        "Riego": "Riego constante para mantener humedad pero no encharcar",
+        "Luz":"Necesita mucha luz",
+        "Cuidados":"No son resistentes al frío",
+        "imagen":"../assets/jazmin.jpg"
+    }
+
+]
+    
