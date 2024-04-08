@@ -2,15 +2,15 @@ import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { useSelector } from 'react-redux'
 import { useState, useEffect } from 'react'
-import fonts, { fontsColection } from '../utils/fonts'
-import { useFonts } from 'expo-font'
+import fonts from '../utils/fonts'
+/* import { useFonts } from 'expo-font' */
 import { colors } from '../utils/colors'
 
 const DetalleMiPlanta = ({route}) => {
     console.log("Detalle mi planta")
     const {idMiPlanta} = route.params
     console.log(idMiPlanta)
-    const [fontsLoaded] = useFonts(fontsColection)
+    /* const [fontsLoaded] = useFonts(fontsColection) */
     const misplantas = useSelector((state)=>state.misplantas)
     console.log(misplantas)
     const [miplanta,setMiPlanta] = useState({})

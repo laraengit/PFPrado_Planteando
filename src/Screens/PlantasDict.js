@@ -1,7 +1,7 @@
 import { FlatList, StyleSheet, Text, View, ActivityIndicator } from 'react-native'
 import React from 'react'
 import ListaTareas from '../components/ListaTareas'
-import plantasData from '../utils/data/plantasData.json'
+/* import plantasData from '../utils/data/plantasData.json' */
 import CardPlanta from '../components/CardPlanta'
 import { colors } from '../utils/colors'
 import { useGetPlantasDictQuery } from '../app/services/plantar'

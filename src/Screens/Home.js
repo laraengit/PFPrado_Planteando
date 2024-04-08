@@ -4,11 +4,11 @@ import Cabecera from '../components/Cabecera'
 import BotonPropio from '../components/BotonPropio'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import { colors } from '../utils/colors'
-import { fontsColection } from '../utils/fonts'
-import { useFonts } from 'expo-font'
+/* import { fontsColection } from '../utils/fonts'
+import { useFonts } from 'expo-font' */
 
 const Home = ({navigation}) => {
-  const [fontsLoaded] = useFonts(fontsColection)
+  /* const [fontsLoaded] = useFonts(fontsColection) */
   return (
     <View style = {styles.container}>
       

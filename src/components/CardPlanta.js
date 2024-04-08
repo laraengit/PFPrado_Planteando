@@ -7,8 +7,9 @@ import { colors } from '../utils/colors'
 import fonts from '../utils/fonts'
 const CardPlanta = ({navigation,item, screenHeigth, screenWidth}) => {
     const [fontsLoaded] = useFonts(fontsColection)
+    console.log(item.id)
     return (
-    <View style = {[styles.card,{width:screenWidth -70,height:screenHeigth -750}]}>
+    <View key={item.id} style = {[styles.card,{width:screenWidth -70,height:screenHeigth -750}]}>
         
       <Text style = {styles.textTitle} >{item.nombre}</Text>
       <BotonPropio
