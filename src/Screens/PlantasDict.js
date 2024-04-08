@@ -1,16 +1,19 @@
-import { FlatList, StyleSheet, Text, View } from 'react-native'
+import { FlatList, StyleSheet, Text, View, ActivityIndicator } from 'react-native'
 import React from 'react'
 import ListaTareas from '../components/ListaTareas'
 import plantasData from '../utils/data/plantasData.json'
 import CardPlanta from '../components/CardPlanta'
 import { colors } from '../utils/colors'
+import { useGetPlantasDictQuery } from '../app/services/plantar'
 
 const PlantasDict = ({navigation,route}) => {
     const {screenHeigth, screenWidth} = route.params
+    const { data, error, isLoading } = useGetPlantasDictQuery()
+    if(isLoading) return <View style={[styles.cardContainer,{height:screenHeigth - 150}]}><ActivityIndicator size="large"color={colors.verdeOscuro} /></View>
   return (
     <View style = {[styles.cardContainer,{height:screenHeigth - 150}]}>
         <FlatList
-    data={plantasData}
+    data={data}
     keyExtractor={item => item}
     renderItem={({item})=> 
     <CardPlanta

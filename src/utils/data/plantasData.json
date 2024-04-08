@@ -27,7 +27,76 @@
         "Luz":"Necesita mucha luz",
         "Cuidados":"No son resistentes al frío",
         "imagen":"../assets/jazmin.jpg"
-    }
+    },
+
+    
+    {
+        "id": 4,
+        "nombre": "Cactus",
+        "Riego": "Riego escaso, una vez cada dos semanas",
+        "Luz": "Necesita luz solar directa",
+        "Cuidados": "Evitar el exceso de agua en el suelo",
+        "imagen": "../assets/cactus.jpg"
+    },
+    {
+        "id": 5,
+        "nombre": "Lavanda",
+        "Riego": "Riego moderado, cada semana",
+        "Luz": "Necesita luz solar directa",
+        "Cuidados": "Podar las flores marchitas regularmente",
+        "imagen": "../assets/lavanda.jpg"
+    },
+    {
+        "id": 6,
+        "nombre": "Ficus",
+        "Riego": "Riego moderado, mantener el suelo húmedo",
+        "Luz": "Luz indirecta brillante",
+        "Cuidados": "Evitar cambios bruscos de temperatura",
+        "imagen": "../assets/ficus.jpg"
+    },
+    {
+        "id": 7,
+        "nombre": "Suculenta",
+        "Riego": "Riego escaso, cada dos semanas",
+        "Luz": "Luz solar directa o indirecta",
+        "Cuidados": "Usar sustrato especial para cactus y suculentas",
+        "imagen": "../assets/suculenta.jpg"
+    },
+
+    {
+        "id": 8,
+        "nombre": "Orquídea",
+        "Riego": "Riego moderado, mantener el sustrato húmedo pero no encharcado",
+        "Luz": "Luz indirecta brillante",
+        "Cuidados": "Proporcionar alta humedad ambiental",
+        "imagen": "../assets/orquidea.jpg"
+    },
+    {
+        "id": 9,
+        "nombre": "Monstera Deliciosa",
+        "Riego": "Riego moderado, dejar secar ligeramente el sustrato entre riegos",
+        "Luz": "Luz indirecta brillante a semisombra",
+        "Cuidados": "Proporcionar soporte para su crecimiento vertical",
+        "imagen": "../assets/monstera_deliciosa.jpg"
+    },
+    {
+        "id": 10,
+        "nombre": "Ficus lyrata",
+        "Riego": "Riego moderado, mantener el sustrato ligeramente húmedo",
+        "Luz": "Luz indirecta brillante a semisombra",
+        "Cuidados": "Limpiar periódicamente sus hojas para evitar la acumulación de polvo",
+        "imagen": "../assets/ficus_lyrata.jpg"
+    },
+    {
+        "id": 11,
+        "nombre": "Cinta o Lazo de Amor",
+        "Riego": "Riego moderado, mantener el sustrato húmedo pero no encharcado",
+        "Luz": "Luz indirecta a semisombra",
+        "Cuidados": "Podar regularmente para evitar que crezca demasiado",
+        "imagen": "../assets/cinta.jpg"
+    }    
+
+    
 
 ]
     

@@ -26,6 +26,7 @@ const DetalleMiPlanta = ({route}) => {
   return (
     <View style={styles.container}>
     {/* <Image style = {styles.imgDetalle} source={require(planta.imagen)}/> */}
+      
     
       <Text style={styles.nombreTxt}>{miplanta.nombre}</Text>
       <Text style={styles.label}>

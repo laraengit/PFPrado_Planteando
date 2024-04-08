@@ -18,6 +18,8 @@ const DetalleScreen = ({route}) => {
   },[idPlanta])
   return (
     <View style={styles.container}>
+      <Image style={styles.imgDetalle} source={{ uri: planta.imagen }} />
+
     {/* <Image style = {styles.imgDetalle} source={require(planta.imagen)}/> */}
     
       <Text style={styles.nombreTxt}>{planta.nombre}</Text>
@@ -57,7 +59,7 @@ const styles = StyleSheet.create({
     },
     imgDetalle:{
         width:280,
-        resizeMode:"cover"
+        resizeMode:"contain"
 
 
     },

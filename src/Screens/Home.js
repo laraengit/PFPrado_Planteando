@@ -17,11 +17,13 @@ const Home = ({navigation}) => {
               nombre={"Mis plantas"}
               colorFondo={colors.verdeOscuro}
               onPress={() => {navigation.navigate("Plantas",{})}}
+              tamFuente={30}
               />
         <BotonPropio
               nombre={"+ Info"}
               colorFondo={colors.verdeChillon}
               onPress={() => {console.log("+ info")}}
+              tamFuente={30}
               />
 
     
