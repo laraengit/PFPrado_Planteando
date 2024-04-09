@@ -1,9 +1,9 @@
 import { StyleSheet, Text, View, Pressable } from 'react-native'
 import React from 'react'
-import fonts from '../utils/fonts'
-/* import { useFonts } from 'expo-font' */
+import {fonts,fontsColection} from '../utils/fonts'
+import { useFonts } from 'expo-font'
 const BotonPropio = ({nombre,colorFondo,onPress, tamFuente}) => {
-  /* const [fontsLoaded] = useFonts(fontsColection) */
+  const [fontsLoaded] = useFonts(fontsColection)
   return (
     <Pressable style={[styles.boton,{backgroundColor:colorFondo, fontSize:tamFuente}]} onPress={onPress}>
       <Text style={styles.textBoton}>{nombre}</Text>
@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
     },
     textBoton:{
         color: 'white',
-        fontFamily:fonts.Lato
+        fontFamily:'Lato'
     }
     
 

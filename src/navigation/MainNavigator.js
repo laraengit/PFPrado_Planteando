@@ -16,6 +16,8 @@ import PlantasNavigator from './PlantasNavigator'
 import { colors } from '../utils/colors'
 import TabBarIcon from '../components/TabBarIcon.js'
 import MisPlantasNavigator from './MisPlantasNavigator.js'
+import { useSelector } from 'react-redux'
+import AuthNavigator from './AuthNavigator.js'
 
 const MainNavigator = ({tareaTitle, onHandlerTitle,tareaDesc, onHandlerDesc,agregarTarea, screenWidth,
   arrTarea,/* onHandlerModal, */ /* completeTask, */ screenHeigth, tareaSelect,/* borrarTarea, *//* modalVisible, */ /* onHandlerDetalle */}) => {
@@ -23,6 +25,7 @@ const MainNavigator = ({tareaTitle, onHandlerTitle,tareaDesc, onHandlerDesc,agre
     const Stack = createNativeStackNavigator()
     const {height, width, scale, fontScale} = useWindowDimensions()
     const Tab = createBottomTabNavigator()
+    const user = useSelector((state) => state.auth)
   return (
     // <NavigationContainer styles = {styles.container}>
     //     <Stack.Navigator initialRouteName="Home" 
@@ -43,7 +46,7 @@ const MainNavigator = ({tareaTitle, onHandlerTitle,tareaDesc, onHandlerDesc,agre
     // </NavigationContainer>
 
     <NavigationContainer>
-      <Tab.Navigator
+      {user.idToken?<Tab.Navigator
       initialRouteName='HomeNavigator'
       screenOptions={{
         headerShown:false,
@@ -68,7 +71,10 @@ const MainNavigator = ({tareaTitle, onHandlerTitle,tareaDesc, onHandlerDesc,agre
           
       }}
         />
-      </Tab.Navigator>
+      </Tab.Navigator>: <AuthNavigator/>
+
+      }
+      
     </NavigationContainer>
   )
 }

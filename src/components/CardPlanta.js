@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
         margin: 10,
         padding:10,
         fontSize:20 ,       
-        fontFamily:fonts.Montserrat,
+        fontFamily:"Montserrat",
 
       },
 })

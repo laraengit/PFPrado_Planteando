@@ -2,11 +2,11 @@ import { StyleSheet, Text, View, Image, Pressable, Platform, StatusBar} from 're
 import React from 'react'
 import { AntDesign } from '@expo/vector-icons'
 import BotonAtras from './BotonAtras'
-/* import { fontsColection } from '../utils/fonts'
-import { useFonts } from 'expo-font' */
-import fonts from '../utils/fonts'
+import { fontsColection } from '../utils/fonts'
+import { useFonts } from 'expo-font'
+
 const Cabecera = ({titulo, navigation, route}) => {
-  /* const [fontsLoaded] = useFonts(fontsColection) */
+  const [fontsLoaded] = useFonts(fontsColection)
   return (
     <View style = {styles.cabecera}>
       {route.name === "Inicio" ? 
@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
       color:"black",
       textAlign:"center",
       backgroundColor: 'white',
-      fontFamily:fonts.Raleway,
+      fontFamily:'Raleway',
       fontSize: 24,
     },
     imgCabecera:{

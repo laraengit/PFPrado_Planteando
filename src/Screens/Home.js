@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View, Image } from 'react-native'
 import React from 'react'
 import Cabecera from '../components/Cabecera'
 import BotonPropio from '../components/BotonPropio'
@@ -11,19 +11,20 @@ const Home = ({navigation}) => {
   /* const [fontsLoaded] = useFonts(fontsColection) */
   return (
     <View style = {styles.container}>
-      
+{/*         <Image style = {styles.imgHome} source={require('../../assets/icono_planteando.png')} />
+ */}
       
         <BotonPropio
               nombre={"Mis plantas"}
               colorFondo={colors.verdeOscuro}
-              onPress={() => {navigation.navigate("Plantas",{})}}
-              tamFuente={30}
+              onPress={() => {navigation.navigate("Plantas")}}
+              tamFuente={60}
               />
         <BotonPropio
               nombre={"+ Info"}
               colorFondo={colors.verdeChillon}
               onPress={() => {console.log("+ info")}}
-              tamFuente={30}
+              tamFuente={20}
               />
 
     
@@ -42,5 +43,9 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         gap:30,
       },
-      
+      imgHome:{
+        width:'25%',
+        resizeMode: 'contain'
+        
+      }
 })

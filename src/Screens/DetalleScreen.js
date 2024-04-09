@@ -3,15 +3,15 @@ import React from 'react'
 import plantasData from '../utils/data/plantasData.json'
 import { useState, useEffect } from 'react'
 import { colors } from '../utils/colors'
-import fonts from '../utils/fonts'
+import fontsColection from '../utils/fonts'
 import { useGetPlantaQuery } from '../app/services/plantar'
-/* import { useFonts } from 'expo-font' */
+import { useFonts } from 'expo-font'
 
 const DetalleScreen = ({route}) => {
     const {idPlanta} = route.params
     console.log(idPlanta)
     /* const [planta,setPlanta] = useState({}) */
-    /* const [fontsLoaded] = useFonts(fontsColection) */
+    const [fontsLoaded] = useFonts(fontsColection)
     const {data,isLoading, isError} = useGetPlantaQuery(idPlanta)
     console.log(data)
     console.log('Loading:', isLoading);
@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
     },
     label:{
         textAlign:"left",
-        fontFamily:fonts.Montserrat,
+        fontFamily:"Montserrat",
         width:280,
         borderRadius:8,
         backgroundColor:colors.VerdeClaro,
