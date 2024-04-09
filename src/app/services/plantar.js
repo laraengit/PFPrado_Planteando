@@ -16,8 +16,15 @@ export const plantasApi = createApi({
         }),
         getPlanta:builder.query({
             query:(id) => `/plantasDict/${id}.json`
-        })
+        }),
+        addPlanta: builder.mutation({
+            query: (planta) => ({
+              url: '/misPlantas.json',
+              method: 'POST',
+              body: planta,
+            }),
+          }),
     })
 })
 
-export const {useGetPlantasDictQuery,useGetPlantaQuery} = plantasApi
+export const {useGetPlantasDictQuery,useGetPlantaQuery, useAddPlantaMutation} = plantasApi

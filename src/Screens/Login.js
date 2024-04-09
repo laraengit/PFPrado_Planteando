@@ -79,7 +79,8 @@ const styles = StyleSheet.create({
     main:{
       flex:1,
       justifyContent:"center",
-      alignItems:"center"
+      alignItems:"center",
+      backgroundColor:colors.celeste
     },
     container:{
       width:"90%",
@@ -101,6 +102,6 @@ const styles = StyleSheet.create({
     subLink:{
       fontSize:14,
       fontFamily:'Lato',
-      color:"blue"
+      color:colors.verdeOscuro
     }
 })

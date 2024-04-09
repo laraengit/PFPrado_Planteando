@@ -9,7 +9,7 @@ const Cabecera = ({titulo, navigation, route}) => {
   const [fontsLoaded] = useFonts(fontsColection)
   return (
     <View style = {styles.cabecera}>
-      {route.name === "Inicio" ? 
+      {((route.name === "Inicio")||(route.name === "Login")||(route.name === "Register"))? 
       <View style={styles.flexCabecera}>
         
       <Text style={styles.txtCabecera}>{titulo}</Text>

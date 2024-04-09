@@ -73,9 +73,9 @@ const Register = ({navigation}) => {
                     error={errorConfirmPassword}
                 />
                 <SubmitButton onPress={onSubmit} title="Registrarme"/>
-                <Text style={styles.sub}>ya tenes una cuenta?</Text>
+                <Text style={styles.sub}>¿Ya tenes una cuenta?</Text>
                 <Pressable onPress={()=> navigation.navigate("Login")} >
-                    <Text style={styles.subLink}>Incio de sesion</Text>
+                    <Text style={styles.subLink}>Inicio de sesion</Text>
                 </Pressable>
             </View>
         </View>
@@ -88,7 +88,8 @@ const styles = StyleSheet.create({
     main:{
       flex:1,
       justifyContent:"center",
-      alignItems:"center"
+      alignItems:"center",
+      backgroundColor: colors.celeste
     },
     container:{
       width:"90%",
@@ -110,6 +111,6 @@ const styles = StyleSheet.create({
     subLink:{
       fontSize:14,
       fontFamily:'Lato',
-      color:"blue"
+      color:colors.verdeOscuro
     }
 })

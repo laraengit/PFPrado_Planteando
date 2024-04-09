@@ -9,6 +9,7 @@ import MisPlantas from '../Screens/MisPlantas'
 import DetalleMiPlanta from '../Screens/DetalleMiPlanta'
 import { agregarPlanta } from '../features/misplantasSlice'
 import AgregarPlantaScreen from '../Screens/AgregarPlantaScreen'
+import ImageSelector from '../components/ImageSelector'
 
 const MisPlantasNavigator = ({route}) => {
     const Stack = createNativeStackNavigator()
@@ -24,7 +25,8 @@ const MisPlantasNavigator = ({route}) => {
         }}>
           <Stack.Screen name="Mis Plantas" component={MisPlantas} initialParams={{screenHeigth,screenWidth}}/> 
           <Stack.Screen name="Mi planta" component={DetalleMiPlanta} /> 
-          <Stack.Screen name="Agregar planta" component={AgregarPlantaScreen} initialParams={{screenHeigth, screenWidth}}/> 
+          <Stack.Screen name="Agregar planta" component={AgregarPlantaScreen} initialParams={{screenHeigth, screenWidth}}/>
+          <Stack.Screen name="Agregar imagen" component={ImageSelector} /> 
       </Stack.Navigator>
   )
 }

@@ -2,11 +2,12 @@ import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import AgregarTarea from '../components/AgregarTarea'
 
-const AgregarPlantaScreen = ({route}) => {
+const AgregarPlantaScreen = ({navigation,route}) => {
     const {screenHeigth,screenWidth} = route.params
   return (
     <View style = {styles.container}>
       <AgregarTarea
+        navigation={navigation}
         screenWidth={screenWidth}
       /> 
     </View>
