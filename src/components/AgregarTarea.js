@@ -5,17 +5,20 @@ import BotonPropio from './BotonPropio'
 import { useFonts } from 'expo-font';
 import fonts, { fontsColection } from '../utils/fonts';
 import { agregarPlanta } from '../features/misplantasSlice';
-import { UseDispatch, useDispatch, useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { setPlanta } from '../features/nuevaPlantaSlice';
 import { useState } from 'react';
 import { colors } from '../utils/colors';
 import { plantasApi, useAddPlantaMutation } from '../app/services/plantar';
 import ImageSelector from './ImageSelector';
+import { cargarMisPlantas } from '../features/cargarSlice';
 
 
 const AgregarTarea = ({navigation,screenWidth}) => {
+  const localId = useSelector((state)=> state.auth.localId)
+  console.log(localId)
+  const imagenplanta = useSelector((state)=>state.imagenplanta)
   console.log("AGREGAR TAREA")
-
   const [imagenPlanta, setImagenPlanta] = useState(null);
   const [addPlanta, isLoading, isError ] = useAddPlantaMutation();
   const [fontsLoaded] = useFonts(fontsColection)
@@ -33,7 +36,7 @@ const AgregarTarea = ({navigation,screenWidth}) => {
     setRiego("")
     setCuidados("")
   }
-
+/* 
   const armoPlanta = () =>{
     console.log("ARMO PLANTA")
     setPlantaNueva({
@@ -45,7 +48,7 @@ const AgregarTarea = ({navigation,screenWidth}) => {
     })
     console.log(plantaNueva)
     
-  }
+  } */
 
   
   /* const [tareaTitle,setTitle] = useState("")
@@ -90,19 +93,23 @@ const AgregarTarea = ({navigation,screenWidth}) => {
         <BotonPropio
             nombre={"Agregar a mis plantas"}
             colorFondo={colors.rosa}
-            onPress={() => {dispatch(agregarPlanta({
+            onPress={() => {/* dispatch(agregarPlanta({
+              localId: localId,
               nombre : nombre,
               especio : especie,
               riego:riego,
               cuidados: cuidados,
-            })) ; addPlanta({
-              id : uuid.v4(),
+              imagen: imagenplanta
+            })) ; */ 
+            addPlanta({
+              id:uuid.v4(),
+              localId: localId,
               nombre : nombre,
-              especio : especie,
+              especie : especie,
               riego:riego,
               cuidados: cuidados,
-              imagen: imagenPlanta
-            });limpiarInput()}}
+              imagen: imagenplanta.item
+            });limpiarInput(); dispatch(cargarMisPlantas())}}
             tamFuente={24}/>
         {/* <Button title='+' onPress={agregarTarea}/> */}
       </View>

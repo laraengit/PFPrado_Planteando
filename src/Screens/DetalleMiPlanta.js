@@ -1,28 +1,35 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View, Image, ActivityIndicator } from 'react-native'
 import React from 'react'
 import { useSelector } from 'react-redux'
 import { useState, useEffect } from 'react'
 import fonts from '../utils/fonts'
 /* import { useFonts } from 'expo-font' */
 import { colors } from '../utils/colors'
+import { useGetMiPlantaIndivQuery } from '../app/services/plantar'
 
 const DetalleMiPlanta = ({route}) => {
     console.log("Detalle mi planta")
     const {idMiPlanta} = route.params
     console.log(idMiPlanta)
     /* const [fontsLoaded] = useFonts(fontsColection) */
-    const misplantas = useSelector((state)=>state.misplantas)
-    console.log(misplantas)
-    const [miplanta,setMiPlanta] = useState({})
-    useEffect(()=>{
+    /* const misplantas = useSelector((state)=>state.misplantas) */
+    /* console.log(misplantas) */
+    const {data, isLoading, isError} = useGetMiPlantaIndivQuery(idMiPlanta)
+    if(isLoading) return <View style={[styles.container]}><ActivityIndicator size="large"color={colors.verdeOscuro} /></View>
+
+    console.log(data)
+    const miplanta = data
+    console.log(miplanta)
+    /* const [miplanta,setMiPlanta] = useState({}) */
+    /* useEffect(()=>{
         const data = misplantas.items
         console.log(data)
         const miplantaElegida = data.find((planta) => planta.id === idMiPlanta)
         console.log(miplantaElegida)
         setMiPlanta(miplantaElegida)
         console.log(miplantaElegida)
-
-      },[idMiPlanta])
+        
+      },[idMiPlanta]) */
   return (
     <View style={styles.container}>
     {/* <Image style = {styles.imgDetalle} source={require(planta.imagen)}/> */}
@@ -42,6 +49,13 @@ const DetalleMiPlanta = ({route}) => {
         <Text style={styles.descTxt}>
           {miplanta.cuidados}
         </Text>
+
+        <Image
+            source={{uri:miplanta.imagen}}
+            style={styles.image}
+            resizeMode='cover'
+
+        />
     </View>
   )
 }
@@ -92,5 +106,10 @@ const styles = StyleSheet.create({
           backgroundColor:'white',
           width:280,
           height:"auto",
-      }
+      },
+      image:{
+        marginTop:0,
+        width:200,
+        height:200
+    }
 })

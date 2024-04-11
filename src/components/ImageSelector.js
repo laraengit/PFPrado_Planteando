@@ -2,12 +2,14 @@ import {useEffect, useState } from 'react'
 import { StyleSheet, Image, View } from 'react-native'
 import BotonPropio from './BotonPropio'
 import * as ImagePicker from 'expo-image-picker'
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 import { colors } from '../utils/colors'
+import { cargarImagen } from '../features/imagenSlice'
 
 
 const ImageSelector = ({navigation, route}) => {
     console.log("IMAGE SELECTOR")
+    const dispatch = useDispatch()
 
     const { setImagenPlanta } = route.params
     const [image,setImage] = useState("")
@@ -44,6 +46,7 @@ const ImageSelector = ({navigation, route}) => {
 
     const confirmImage = () => {
         setImagenPlanta(image); // Actualiza el estado de la imagen en el formulario de planta
+        dispatch(cargarImagen(image))
         navigation.goBack();
     }
 
@@ -78,9 +81,11 @@ const styles = StyleSheet.create({
     container:{
         flex:1,
         alignItems:"center",
-        marginTop:20
+        gap:20,
+        backgroundColor: colors.celeste
     },
     image:{
+        marginTop:20,
         width:200,
         height:200
     }

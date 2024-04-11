@@ -9,8 +9,11 @@ import { useGetPlantasDictQuery } from '../app/services/plantar'
 const PlantasDict = ({navigation,route}) => {
     const {screenHeigth, screenWidth} = route.params
     const { data, error, isLoading } = useGetPlantasDictQuery()
+    
     if(isLoading) return <View style={[styles.cardContainer,{height:screenHeigth - 150}]}><ActivityIndicator size="large"color={colors.verdeOscuro} /></View>
-  return (
+    console.log("PLANTAS DICT")
+    console.log(data)
+    return (
     <View style = {[styles.cardContainer,{height:screenHeigth - 150}]}>
         <FlatList
     data={data}

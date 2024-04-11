@@ -7,7 +7,7 @@ import { colors } from '../utils/colors'
 import fonts from '../utils/fonts'
 const CardPlanta = ({navigation,item, screenHeigth, screenWidth}) => {
     const [fontsLoaded] = useFonts(fontsColection)
-    console.log(item.id)
+    
     return (
     <View key={item.id} style = {[styles.card,{width:screenWidth -70,height:screenHeigth -750}]}>
         

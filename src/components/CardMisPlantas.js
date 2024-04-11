@@ -5,6 +5,7 @@ import BotonPropio from './BotonPropio'
 import { useFonts } from 'expo-font'
 import fonts, { fontsColection } from '../utils/fonts'
 const CardMisPlantas = ({navigation,item, screenHeigth, screenWidth}) => {
+  console.log(item.id)
   const [fontsLoaded] = useFonts(fontsColection)
   return (
     <View style = {[styles.card,{width:screenWidth -70,height:screenHeigth -800}]}>
